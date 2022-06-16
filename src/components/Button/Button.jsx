@@ -3,9 +3,11 @@ import React from "react";
 import "./Button.scss";
 
 const Button = (props) => {
-  const { buttonText } = props;
+  const { buttonText, clickFunction } = props;
   return (
-    <button className="button">{buttonText}</button>
+    <button className="button" onClick={clickFunction}>
+      {buttonText}
+    </button>
   );
 };
 
