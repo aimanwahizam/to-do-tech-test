@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 442px) {
+    .header {
+        margin: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.5rem;
+        border: 2px solid black;
+    }
+}
