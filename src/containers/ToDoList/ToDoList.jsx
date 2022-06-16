@@ -7,9 +7,9 @@ const ToDoList = (props) => {
   const { toDoArray } = props;
 
   const ToDoListJSX = toDoArray.map(task => {
-    return <ToDoCard />
+    return <ToDoCard cardText={task}/>
   })
-  return <div>ToDoList</div>;
+  return <div className="card-list">{ToDoListJSX}</div>;
 };
 
 export default ToDoList;

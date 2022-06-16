@@ -1,13 +1,18 @@
-import React from 'react'
+import React from "react";
+import "./ToDoCard.scss";
 
-const ToDoCard = () => {
+const ToDoCard = (props) => {
+  const { cardText } = props;
+
   return (
-    <form>
-        <input type="checkbox" />
-        <h2>TEXT</h2>
-        <input type="submit" />
+    <form className="card">
+      <div className="card__left">
+        <input type="checkbox" className="card__checkbox" />
+        <h2 className="card__text">{cardText}</h2>
+      </div>
+      <input type="submit" />
     </form>
-  )
-}
+  );
+};
 
-export default ToDoCard
+export default ToDoCard;
