@@ -4,10 +4,10 @@ import ToDoCard from "../../components/ToDoCard/ToDoCard";
 import "./ToDoList.scss";
 
 const ToDoList = (props) => {
-  const { toDoArray } = props;
+  const { toDoArray, taskDelete, taskDone } = props;
 
-  const ToDoListJSX = toDoArray.map(task => {
-    return <ToDoCard cardText={task}/>
+  const ToDoListJSX = toDoArray.map((task, index) => {
+    return <ToDoCard cardText={task} taskDelete={taskDelete} key={index} taskDone={taskDone}/>
   })
   return <div className="card-list">{ToDoListJSX}</div>;
 };

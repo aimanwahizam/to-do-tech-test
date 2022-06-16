@@ -1,7 +1,6 @@
 @media screen and (max-width: 442px) {
   .card {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border: 2px solid black;
@@ -10,15 +9,15 @@
 
     &__left {
       display: flex;
-      flex-direction: row;
       justify-content: space-around;
-      max-width: 70%;
+      max-width: 90%;
     }
 
     &__text {
       font-size: 0.9rem;
       position: relative;
       left: 0.5rem;
+      width: 100vw;
     }
 
     &__checkbox {
