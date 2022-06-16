@@ -1,11 +1,15 @@
-import React from 'react';
+import React from "react";
+import ToDoCard from "../../components/ToDoCard/ToDoCard";
 
-import "./ToDoList.scss"
+import "./ToDoList.scss";
 
-const ToDoList = () => {
-  return (
-    <div>ToDoList</div>
-  )
-}
+const ToDoList = (props) => {
+  const { toDoArray } = props;
 
-export default ToDoList
+  const ToDoListJSX = toDoArray.map(task => {
+    return <ToDoCard />
+  })
+  return <div>ToDoList</div>;
+};
+
+export default ToDoList;

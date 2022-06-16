@@ -1,22 +1,22 @@
 import { useState, useEffect } from "react";
 import "./App.scss";
 import Button from "./components/Button/Button";
-import SearchBar from "./components/SearchBar/SearchBar";
+import InputBar from "./components/InputBar/InputBar";
 import ToDoList from "./containers/ToDoList/ToDoList";
 
 function App() {
-  const [toDoItem, setToDoItem] = useState([]);
+  const [toDoItems, setToDoItems] = useState([]);
 
 
   const handleTaskAdd = (event) => {
     event.preventDefault();
     const taskInput = event.target[0].value;
-    console.log(toDoItem)
+    console.log(toDoItems)
     console.log(taskInput);
-    const copyToDoItemArray = [...toDoItem];
-    const arrayWithNewTask = copyToDoItemArray.concat(taskInput);
+    const copyToDoItemsArray = [...toDoItems];
+    const arrayWithNewTask = copyToDoItemsArray.concat(taskInput);
     console.log(arrayWithNewTask);
-    setToDoItem(arrayWithNewTask);
+    setToDoItems(arrayWithNewTask);
   };
 
   return (
@@ -25,8 +25,8 @@ function App() {
         <h1>My Todos</h1>
         <Button buttonText="Reset" />
       </section>
-      <SearchBar addTask={handleTaskAdd} />
-      <ToDoList />
+      <InputBar addTask={handleTaskAdd} />
+      <ToDoList toDoArray={toDoItems}/>
     </main>
   );
 }
